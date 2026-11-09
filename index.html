@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#101827">
+  <meta name="description" content="NEET Quest 2027 study planner">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <title>NEET Quest 2027</title>
+</head>
+<body>
+<header class="topbar">
+  <div><div class="eyebrow">YOUR STUDY JOURNEY</div><h1>NEET <span>Quest</span> 2027</h1></div>
+  <div class="level">⚡ <b id="xp">0</b> XP</div>
+</header>
+<main>
+  <section class="welcome card">
+    <div><p class="eyebrow">WELCOME BACK, QUESTER</p><h2>Small steps. <span>600+ dreams.</span></h2>
+    <p>Build consistency, track progress, and prepare smartly for boards and NEET.</p></div>
+    <div class="streak">🔥 <strong id="streak">0</strong><small>day streak</small></div>
+  </section>
+  <section class="stats">
+    <div class="stat card"><small>Today's progress</small><strong id="progressText">0%</strong><div class="bar"><i id="progressBar"></i></div></div>
+    <div class="stat card"><small>Tasks completed</small><strong id="doneCount">0 / 0</strong></div>
+    <div class="stat card"><small>Board countdown</small><strong id="boardCountdown">—</strong><small>Days until Feb 16, 2027</small></div>
+  </section>
+  <section class="card">
+    <div class="sectionhead"><div><p class="eyebrow">YOUR DAILY QUEST</p><h2>Today's study plan</h2></div><button id="resetBtn" class="ghost">Reset today</button></div>
+    <div id="taskList" class="tasks"></div>
+    <div class="addrow"><input id="taskInput" placeholder="Add a study task (e.g. Physics derivations)" maxlength="100"><button id="addBtn">＋ Add</button></div>
+  </section>
+  <section class="grid2">
+    <section class="card"><p class="eyebrow">SUBJECT TRACKER</p><h2>Chapter progress</h2>
+      <div class="subject"><span>⚛️ Physics</span><div class="bar"><i style="width:0%" id="physicsBar"></i></div><b id="physicsPct">0%</b></div>
+      <div class="subject"><span>🧪 Chemistry</span><div class="bar"><i style="width:0%" id="chemistryBar"></i></div><b id="chemistryPct">0%</b></div>
+      <div class="subject"><span>🧬 Biology</span><div class="bar"><i style="width:0%" id="biologyBar"></i></div><b id="biologyPct">0%</b></div>
+      <p class="hint">Use the chapter tracker below to mark chapters complete.</p>
+    </section>
+    <section class="card"><p class="eyebrow">QUEST MANAGER</p><h2>Board-first focus</h2>
+      <div class="focus"><span>📘</span><div><b>CBSE Class 12 boards</b><p>Prioritize board theory, derivations, diagrams and written answers. Keep NEET MCQs active.</p></div></div>
+      <div class="focus"><span>🎯</span><div><b>NEET 2027</b><p>Daily MCQs, NCERT revision, mistake review and weak-topic practice.</p></div></div>
+      <p class="hint">This first version uses rule-based planning; AI adaptation will be added in a later stage.</p>
+    </section>
+  </section>
+  <section class="card">
+    <p class="eyebrow">CHAPTER CHECKLIST</p><h2>Class 12 starter tracker</h2>
+    <p class="hint">This is a starter checklist, not a verified official syllabus. Confirm the 2026–27 CBSE syllabus before relying on chapter coverage.</p>
+    <div id="chapterList"></div>
+  </section>
+  <section class="card">
+    <p class="eyebrow">QUICK NOTES</p><h2>Mistake notebook</h2>
+    <textarea id="mistakes" placeholder="Write a mistake, formula, reaction, or concept to revisit…"></textarea>
+    <button id="saveNotes">Save notes</button><span id="noteStatus" class="hint"></span>
+  </section>
+  <footer>NEET Quest 2027 • Your progress is saved on this device.</footer>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
